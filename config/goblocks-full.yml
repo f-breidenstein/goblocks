@@ -128,6 +128,7 @@ blocks:
       # The battery number can be found in /sys/class/power_supply/
       battery_number: 0
       crit_battery: 20
+      charging_color: "#00ff00"
 
     # The volume block currently supports Pulse or ALSA channels through amixer.
     # The amixer utility must be installed and in your $PATH.

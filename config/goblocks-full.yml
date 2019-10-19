@@ -99,8 +99,8 @@ blocks:
       interface_name: enp3s0
       # interface_format is a format string that allows you to specify which
       # interface info to display. The syntax for this string is described here:
-      # https://golang.org/pkg/text/template/
       # These are the supported values:
+      # https://golang.org/pkg/text/template/
       # * Status        - whether the interface is up or down
       # * Ipv4Addr      - IPv4 address
       # * Ipv4Cidr      - IPv4 address in CIDR notation
@@ -111,7 +111,8 @@ blocks:
       # * Ipv6LocalAddr - link local IPv6 address
       # * Ipv6LocalCidr - link local IPv6 address in CIDR notation
       # The default value for interface_format is "{{.Status}}"
-      interface_format: "{{.Status}}, {{.Ipv4Cidr}}"
+      interface_format: "{{.Ipv4Cidr}}"
+      interface_format: "Down"
 
     - type: interface
       label: "W: "

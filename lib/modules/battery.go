@@ -54,6 +54,7 @@ func (c Battery) UpdateBlock(b *i3barjson.Block) {
 
 	if status == "Charging" {
 		b.Color = c.ChargingColor
+		b.Urgent = false
 	}
 
 	b.FullText = fmt.Sprintf(fullTextFmt, capacity)

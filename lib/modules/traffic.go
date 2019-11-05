@@ -75,7 +75,7 @@ func (c Traffic) UpdateBlock(b *i3barjson.Block) {
 	}
 	defer stateFile.Close()
 
-	if speed.Up > c.Limit || speed.Down > c.Limit {
+	if c.Limit > 0 && (speed.Up > c.Limit || speed.Down > c.Limit) {
 		b.Urgent = true
 	}
 

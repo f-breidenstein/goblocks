@@ -57,17 +57,14 @@ func (c Interface) UpdateBlock(b *i3barjson.Block) {
 
 	iface, err := net.InterfaceByName(c.IfaceName)
 	if err != nil {
-		b.Urgent = true
 		b.FullText = fmt.Sprintf(fullTextFmt, err.Error())
 		return
 	}
 
 	linkState, _ := ethHandle.LinkState(c.IfaceName)
 	if linkState == 0 {
-		b.Urgent = true
 		info.Status = "down"
 	} else {
-		b.Urgent = false
 		info.Status = "up"
 	}
 

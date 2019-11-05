@@ -25,7 +25,7 @@ type ByteCounter struct {
 // UpdateBlock updates the traffic interface block.
 func (c Traffic) UpdateBlock(b *i3barjson.Block) {
 	b.Color = c.Color
-	fullTextFmt := fmt.Sprintf("%s%%d up, %%d down", c.Label)
+	fullTextFmt := fmt.Sprintf("%s%%d ⇧, %%d ⇩", c.Label)
 
 	ethHandle, err := ethtool.NewEthtool()
 	if err != nil {
